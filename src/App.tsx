@@ -93,38 +93,41 @@ export default function App() {
       />
 
       {/* Dynamic Animated Page Content */}
-      <main className="flex-1 overflow-hidden">
+      <main className="flex-1 overflow-x-hidden">
         <AnimatePresence mode="wait">
           
           {/* PAGE 1: PRICES & BOOKING (Most Immediate) */}
           {activePage === 'prices' && (
             <motion.div
               key="page-prices"
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.4 }}
+              exit={{ opacity: 0, x: 30 }}
+              transition={{ duration: 0.35 }}
+              className="overflow-x-hidden"
             >
-              <ScrollReveal delay={0.1}>
+              <ScrollReveal direction="left" delay={0.05}>
                 <Hero
                   onScrollToCalculator={handleScrollToCalculator}
                 />
               </ScrollReveal>
 
-              <ScrollReveal delay={0.15}>
+              <ScrollReveal direction="right" delay={0.08}>
                 <PriceList
                   onSelectServiceForCalculator={handleSelectServiceForCalculator}
                 />
               </ScrollReveal>
 
-              <ScrollReveal delay={0.2}>
+              <ScrollReveal direction="left" delay={0.08}>
                 <PriceCalculator initialServiceId={calculatorInitialService} />
               </ScrollReveal>
 
-              <NextPagePrompt
-                currentPage="prices"
-                onPageChange={handlePageChange}
-              />
+              <ScrollReveal direction="right" delay={0.05}>
+                <NextPagePrompt
+                  currentPage="prices"
+                  onPageChange={handlePageChange}
+                />
+              </ScrollReveal>
             </motion.div>
           )}
 
@@ -132,19 +135,22 @@ export default function App() {
           {activePage === 'results' && (
             <motion.div
               key="page-results"
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.4 }}
+              exit={{ opacity: 0, x: 30 }}
+              transition={{ duration: 0.35 }}
+              className="overflow-x-hidden"
             >
-              <ScrollReveal delay={0.1}>
+              <ScrollReveal direction="left" delay={0.05}>
                 <BeforeAfterShowcase />
               </ScrollReveal>
 
-              <NextPagePrompt
-                currentPage="results"
-                onPageChange={handlePageChange}
-              />
+              <ScrollReveal direction="right" delay={0.05}>
+                <NextPagePrompt
+                  currentPage="results"
+                  onPageChange={handlePageChange}
+                />
+              </ScrollReveal>
             </motion.div>
           )}
 
@@ -152,12 +158,13 @@ export default function App() {
           {activePage === 'hamper' && (
             <motion.div
               key="page-hamper"
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.4 }}
+              exit={{ opacity: 0, x: 30 }}
+              transition={{ duration: 0.35 }}
+              className="overflow-x-hidden"
             >
-              <ScrollReveal delay={0.1}>
+              <ScrollReveal direction="right" delay={0.05}>
                 <HamperSection
                   onAddHamperToCalculator={() => {
                     handlePageChange('prices');
@@ -166,10 +173,12 @@ export default function App() {
                 />
               </ScrollReveal>
 
-              <NextPagePrompt
-                currentPage="hamper"
-                onPageChange={handlePageChange}
-              />
+              <ScrollReveal direction="left" delay={0.05}>
+                <NextPagePrompt
+                  currentPage="hamper"
+                  onPageChange={handlePageChange}
+                />
+              </ScrollReveal>
             </motion.div>
           )}
 
@@ -177,19 +186,22 @@ export default function App() {
           {activePage === 'workshop' && (
             <motion.div
               key="page-workshop"
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.4 }}
+              exit={{ opacity: 0, x: 30 }}
+              transition={{ duration: 0.35 }}
+              className="overflow-x-hidden"
             >
-              <ScrollReveal delay={0.1}>
+              <ScrollReveal direction="left" delay={0.05}>
                 <MachineryAndTeam />
               </ScrollReveal>
 
-              <NextPagePrompt
-                currentPage="workshop"
-                onPageChange={handlePageChange}
-              />
+              <ScrollReveal direction="right" delay={0.05}>
+                <NextPagePrompt
+                  currentPage="workshop"
+                  onPageChange={handlePageChange}
+                />
+              </ScrollReveal>
             </motion.div>
           )}
 
@@ -197,19 +209,22 @@ export default function App() {
           {activePage === 'founder' && (
             <motion.div
               key="page-founder"
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.4 }}
+              exit={{ opacity: 0, x: 30 }}
+              transition={{ duration: 0.35 }}
+              className="overflow-x-hidden"
             >
-              <ScrollReveal delay={0.1}>
+              <ScrollReveal direction="right" delay={0.05}>
                 <FounderSection />
               </ScrollReveal>
 
-              <NextPagePrompt
-                currentPage="founder"
-                onPageChange={handlePageChange}
-              />
+              <ScrollReveal direction="left" delay={0.05}>
+                <NextPagePrompt
+                  currentPage="founder"
+                  onPageChange={handlePageChange}
+                />
+              </ScrollReveal>
             </motion.div>
           )}
 
@@ -217,23 +232,26 @@ export default function App() {
           {activePage === 'location' && (
             <motion.div
               key="page-location"
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.4 }}
+              exit={{ opacity: 0, x: 30 }}
+              transition={{ duration: 0.35 }}
+              className="overflow-x-hidden"
             >
-              <ScrollReveal delay={0.1}>
+              <ScrollReveal direction="left" delay={0.05}>
                 <LocationHours />
               </ScrollReveal>
 
-              <ScrollReveal delay={0.15}>
+              <ScrollReveal direction="right" delay={0.08}>
                 <FaqSection />
               </ScrollReveal>
 
-              <NextPagePrompt
-                currentPage="location"
-                onPageChange={handlePageChange}
-              />
+              <ScrollReveal direction="left" delay={0.05}>
+                <NextPagePrompt
+                  currentPage="location"
+                  onPageChange={handlePageChange}
+                />
+              </ScrollReveal>
             </motion.div>
           )}
 
@@ -241,9 +259,11 @@ export default function App() {
       </main>
 
       {/* Global Footer with Page Links */}
-      <Footer
-        onScrollToCalculator={handleScrollToCalculator}
-      />
+      <ScrollReveal direction="left" delay={0.05}>
+        <Footer
+          onScrollToCalculator={handleScrollToCalculator}
+        />
+      </ScrollReveal>
 
       {/* Fixed Mobile Dock with WhatsApp & Call */}
       <MobileQuickBar onScrollToCalculator={handleScrollToCalculator} />
