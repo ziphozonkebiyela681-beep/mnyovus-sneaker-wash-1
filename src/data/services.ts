@@ -32,7 +32,7 @@ export const BUSINESS_INFO = {
     logo: "/assets/aistudio/logo_610336d1.jpeg",
     poster: "/assets/aistudio/WhatsApp_Image_2026-10-31_at_2.52.06_AM_234d50ae.jpeg",
     machine: "/assets/aistudio/WhatsApp_Image_2026-10-31_at_2.49.27_AM_f6819fe1.jpeg",
-    team: "/assets/aistudio/WhatsApp_Image_2026-10-31_at_2.49.27_AM__1__944169a7.jpeg",
+    team: "/assets/aistudio/WhatsApp_Image_2026-11-13_at_12.45.42_AM_d77eabdd.jpeg",
     founderDesk: "/assets/aistudio/mnyovu_workplace_5d1cfc48.jpeg",
     founderCraft: "/assets/aistudio/WhatsApp_Image_2026-10-31_at_2.49.27_AM__2__8eff82f2.jpeg",
     beforeShoe: "/assets/aistudio/WhatsApp_Image_2026-10-31_at_2.49.28_AM_da457296.jpeg",

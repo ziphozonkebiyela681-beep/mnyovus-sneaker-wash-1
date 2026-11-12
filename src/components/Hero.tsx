@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone, MessageCircle, Sparkles, CheckCircle2, Eye, Calculator, MapPin, Clock } from 'lucide-react';
 import { BUSINESS_INFO, createDirectCallUrl, createWhatsAppBookingUrl } from '../data/services';
 
+
 interface HeroProps {
   onScrollToCalculator: () => void;
 }
